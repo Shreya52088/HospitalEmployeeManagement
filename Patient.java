@@ -1,7 +1,7 @@
 public class Patient extends User{
   private String bloodType;
-  public Patient (String name ,String email, String pass,  String bType){
-    super(name, email, pass);
+  public Patient (String name ,String email, String password,  String bType){
+    super(name, email, password);
     this.bloodType = bType;
   }
   public String getBloodType(){
@@ -10,6 +10,7 @@ public class Patient extends User{
 
   @Override
   public String toString() {
-      return super.toString() + ", Blood Type: " + bloodType + "\n";
+      return super.toString() + 
+      ", Blood Type: " + bloodType + "\n";
   }
 }

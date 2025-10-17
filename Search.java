@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -63,7 +64,8 @@ public class Search extends JFrame implements ActionListener{
           UserInterface u = Database.users.get(i);
           if(u.getName().equalsIgnoreCase(name)){
             found = true;
-            result .append("Name: " + u.getName() + "\n" + "Email: " + u.getEmail() + "\n" + "Password: " + u.getPassword() + "\n");
+            // result .append("Name: " + u.getName() + "\n" + "Email: " + u.getEmail() + "\n" + "Password: " + u.getPassword() + "\n");
+            result.append( u.toString());
             if (u instanceof Doctor) {
               Doctor d = (Doctor) u;
               result.append("Specialization:" + d.getSpecialization());
@@ -72,6 +74,10 @@ public class Search extends JFrame implements ActionListener{
               result.append("BloodType: " + p.getBloodType());
             }
           }
+
+          // if (u.getSpecialization().equalsIgnoreCase(name)) {
+            
+          // }
         }
         if(!found ){
           result.setText("No user found with that name ");

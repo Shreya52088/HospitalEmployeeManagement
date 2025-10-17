@@ -32,7 +32,7 @@ public abstract class User  implements UserInterface{
   
 
   public String toString(){
-    return "Name: " + name + ", Email: " + email;
+    return "Name: " + name + ", Email: " + email + ", Password" + password ;
   }
 
 }

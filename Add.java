@@ -76,8 +76,7 @@ public class Add extends JFrame implements ActionListener {
             inputPanel.add(password); inputPanel.add(passTxt);
             inputPanel.add(specialization); inputPanel.add(specTxt);
             inputPanel.add(bloodType); inputPanel.add(BloodTypeTxt);
-            inputPanel.add(isDoctor);inputPanel.add(isDoctorCheckBox);
-            
+            inputPanel.add(isDoctor);inputPanel.add(isDoctorCheckBox);            
             panel.add(inputPanel);
 
             JPanel btnPanel = new JPanel();
@@ -94,14 +93,11 @@ public class Add extends JFrame implements ActionListener {
             addButton.addActionListener(this);
             backButton.addActionListener(this);
 
-
             this.add(titleLabel, BorderLayout.NORTH);
             this.add(panel, BorderLayout.CENTER);
             setVisible(true);
-
-
-
         }
+
         public void actionPerformed(ActionEvent e){
           String actionCommand = e.getActionCommand();
           System.out.println(actionCommand);
@@ -127,8 +123,7 @@ public class Add extends JFrame implements ActionListener {
                 d = new Patient(nameTxt.getText(),emailTxt.getText(), passTxt.getText(), BloodTypeTxt.getText());
               }  
                 Database.users.add(d);
-                String msg= d.toString();
-                allUserTxt.append(msg);
+                allUserTxt.append(d.toString());
                 JOptionPane.showMessageDialog(this, "Successfully added Users");
                 nameTxt.setText("");
                 emailTxt.setText("");

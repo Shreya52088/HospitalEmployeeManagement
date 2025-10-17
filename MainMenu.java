@@ -14,7 +14,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
-
 public class MainMenu extends JFrame implements ActionListener {
   private JPanel panel ;
   private JLabel titleLable;
@@ -22,7 +21,6 @@ public class MainMenu extends JFrame implements ActionListener {
   private JButton searchButton;
   private JButton exitButton;
   public static List<UserInterface> users = new ArrayList<>();
-
 
   public MainMenu(){
     setTitle("Add user data");
@@ -33,7 +31,6 @@ public class MainMenu extends JFrame implements ActionListener {
     titleLable.setForeground(Color.black);
     titleLable.setFont(new Font ("", Font.BOLD, 25));
 
-
     addButton = new JButton("Add user");
     searchButton= new JButton("Search users");
     exitButton = new JButton("Exit");
@@ -42,7 +39,6 @@ public class MainMenu extends JFrame implements ActionListener {
     panel.setLayout(new GridLayout(4, 1));
     panel.setBorder(new EmptyBorder(20, 15, 15, 15));
 
-
     addButton.setAlignmentX(Component.CENTER_ALIGNMENT);
     addButton.setFont(new Font ("Arial",Font.PLAIN, 15));
     searchButton.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -50,14 +46,12 @@ public class MainMenu extends JFrame implements ActionListener {
     exitButton .setAlignmentX(Component.CENTER_ALIGNMENT);
     exitButton.setFont(new Font ("Arial",Font.PLAIN, 15));
 
-
     addButton.addActionListener(this);
     searchButton.addActionListener(this);
     exitButton.addActionListener(this);
     panel.add(addButton);
     panel.add(searchButton);
     panel.add(exitButton);
-
 
     add (titleLable,BorderLayout.NORTH ) ;
     add (panel,BorderLayout.CENTER ) ;
